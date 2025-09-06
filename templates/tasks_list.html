@@ -1,0 +1,9 @@
+<h1>Task List</h1>
+
+<ul>
+    {% for pendiente in task_list %}
+        <li>{{ pendiente.title }} - Created at: {{ pendiente.created_at }} - Updated at: {{ pendiente.updated_at }}</li>
+    {% empty %}
+        <li>No hay más tareas.</li>
+    {% endfor %}
+</ul>
